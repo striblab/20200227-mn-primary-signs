@@ -1,0 +1,51 @@
+{
+  "about this file": "This document defines configuration for this project that is not content or copy.",
+  "projectIdentifier": "20200227-mn-primary-signs",
+
+  "cms": {
+    "defaultArticleContentTemplateRewriteClass": "article-lcd-body-content",
+    "pages": [
+      
+      {
+        "id": "index",
+        "articleId": "566290751",
+        "lcd": "568184231",
+        "default": true
+      }
+      
+    ]
+  },
+
+
+  "styles": {
+    "globals": [
+    ]
+  },
+  "js": {
+    "globals": [
+      "https://cdn.polyfill.io/v2/polyfill.min.js",
+      "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ]
+  },
+  "publishToken": "72661f72541553b141935beb28cde910",
+  "publish": {
+    "default": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects-staging/all/20200227-mn-primary-signs",
+      "url": "http://static.startribune.com/news/projects-staging/all/20200227-mn-primary-signs/",
+      "cacheSeconds": 30
+    },
+    "testing": {
+      "bucket": "stribtest-bucket",
+      "path": "news/projects/20200227-mn-primary-signs",
+      "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/20200227-mn-primary-signs/",
+      "cacheSeconds": 30
+    },
+    "production": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects/all/20200227-mn-primary-signs",
+      "url": "http://static.startribune.com/news/projects/all/20200227-mn-primary-signs/",
+      "cacheSeconds": 600
+    }
+  }
+}

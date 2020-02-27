@@ -1,0 +1,195 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+
+// Include strib-icons
+$strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.10/';
+@import '@striblab/strib-icons/build/strib-icons.scss';
+
+
+// Environment noting
+@import "shared/_environment";
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+
+// Assumed that this project lives within an existing page, so we add a
+// wrapper that is very specific and wrap our other styles in it so
+// that we don't affect other styles on the page.  Note that
+// this increases the CSS size, and it means strib-styles won't use
+// rems when it would otherwise.
+$selector-wrapper: '.strib-styles.ssa.ssb.ssc';
+@import '@striblab/strib-styles/source/styles/default-wrapper.scss';
+
+// Project specific styles.  Split styles into files per component
+#{$selector-wrapper} {
+  // Split your styles into multiple files so its easier to understand and change
+  @import 'shared/_project';
+}
+
+
+.slide .byline {
+  width:520px;
+  margin-right:auto !important;
+  margin-left:auto !important;
+  line-height:140%;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  font-size:0.6em !important;
+  color: #888 !important;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:left;
+}
+
+#chart {
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.card {
+  margin-bottom:20px;
+  margin:10px;
+  display: inline-block;
+  width:47%;
+  color:#ffffff;
+  border-radius: 25px;
+}
+
+.name {
+  font-weight:bold;
+  text-align:center;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.contentField {
+  background-color:#ffffff;
+  margin-right:auto;
+  margin-left:auto;
+  width:90%;
+  color:#000000;
+  margin-bottom:30px;
+  padding-bottom:20px;
+}
+
+.metric {
+  font-size:0.8em;
+  line-height:140%;
+  padding-left:10px;
+  text-align:left !important;
+}
+
+.num {
+  font-weight:bold;
+}
+
+.ruler {
+  width:80%;
+  border-top:1px solid black;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.label {
+  font-size:0.8em;
+  font-weight:bold;
+  text-align:center;
+}
+
+.totals {
+  margin-bottom:10px;
+}
+
+.thumb img {
+  width:80px;
+}
+
+.chartBar div {
+  display:inline-block;
+  width:48%;
+}
+
+.chartBar {
+  margin-bottom:5px;
+}
+
+.barred {
+  font-size:0.8em;
+  font-weight:bold;
+  padding:3px;
+}
+
+@media (max-width:800px) {
+  .slide, .container-lg, #wrapper, #chart {
+      width:100% !important;
+      max-width:100% !important;
+      min-width:100% !important;
+ }
+}
+
+@media (max-width:500px) {
+  #wrapper, .slide, .card {
+      width:100%;
+  }
+
+  .slide .byline {
+    width:100%;
+  }
+
+  .card {
+    margin:0;
+    margin-bottom:20px;
+    border-radius: 0;
+  }
+
+  .padded {
+    padding-left:25px !important;
+    padding-right:25px !important;
+  }
+
+  .rule {
+    min-width:100%;
+  }
+
+}
+
+table.tableizer-table {
+  font-size: 12px;
+  border: 1px solid #CCC; 
+  font-family: Arial, Helvetica, sans-serif;
+} 
+.tableizer-table td {
+  padding: 4px;
+  margin: 3px;
+  border: 1px solid #CCC;
+  text-align:right;
+}
+.tableizer-table th {
+  background-color: #104E8B; 
+  color: #FFF;
+  font-weight: bold;
+}
+.candidate {
+  text-align:left !important;
+}
+.dropped {
+  color:#888888;
+}
+.cutoff {
+  display:none;
+}
+#showhide {
+  color:#888888;
+  text-align:center;
+  font-size:0.8em;
+}
+#showhide:hover {
+  opacity:0.5;
+  cursor:pointer;
+}
